@@ -81,7 +81,7 @@ ical_parse <- function(file = NULL, text = NULL){
   }
   ")
 
-  # retrieve and return
-  v8_env$v8$get("res")
+  # retrieve, cleanup and return
+  ical_clean_ical_parsed(v8_env$v8$get("res"))
 }
 
