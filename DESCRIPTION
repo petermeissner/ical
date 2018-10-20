@@ -28,4 +28,5 @@ RoxygenNote: 6.1.0
 Imports: 
     V8 (>= 1.5)
 Suggests: 
-    testthat
+    testthat,
+    covr
