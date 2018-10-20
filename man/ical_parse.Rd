@@ -17,14 +17,6 @@ ical_parse_list(file = NULL, text = NULL)
 \item{file}{path to file to be read in and parsed}
 
 \item{text}{text of ical file}
-
-\item{file}{path to file to be read in and parsed}
-
-\item{text}{text of ical file}
-
-\item{file}{path to file to be read in and parsed}
-
-\item{text}{text of ical file}
 }
 \description{
 Parses iCalendar format from character vector or file and returns it

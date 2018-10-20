@@ -5,9 +5,6 @@
 #'
 #' @rdname ical_parse
 #'
-#' @param file path to file to be read in and parsed
-#' @param text text of ical file
-#'
 #' @export
 #'
 ical_parse_df <- function(file = NULL, text = NULL){
