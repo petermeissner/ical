@@ -1,7 +1,8 @@
 Package: ical
 Type: Package
 Title: iCalendar parsing
-Version: 0.1.0
+Version: 0.1.1
+Date: 2018-10-24
 Author: c(
     person(
       "Peter", 

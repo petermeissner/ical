@@ -8,7 +8,9 @@
 #' @export
 #'
 ical_parse_df <- function(file = NULL, text = NULL){
-  ical_parse(file = file, text = text)
+  as.data.frame(
+    ical_parse(file = file, text = text)
+  )
 }
 
 
