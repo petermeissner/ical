@@ -2,7 +2,11 @@
 
 before_install:
   - sudo apt-get install -y libv8-3.14-dev
-language: R
+language: r
+r:
+  - oldrel
+  - release
+  - devel
 sudo: false
 cache: packages
 r_packages:
