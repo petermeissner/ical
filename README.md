@@ -5,7 +5,7 @@
 
 **Status**
 
-*lines of R code:* 92, *lines of test code:* 22
+*lines of R code:* 92, *lines of test code:* 62
 
 [![Project Status: Initial development is in progress, but there has not
 yet been a stable, usable release suitable for the
@@ -21,7 +21,7 @@ public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus
 
 **Development version**
 
-0.1.1 - 2018-10-24 / 06:35:32
+0.1.2 - 2018-11-05 / 10:59:57
 
 **Description**
 
