@@ -21,7 +21,8 @@ Author: c(
   )
 Maintainer: Peter Meissner <retp.meissner@gmail.com>
 Description: A simple wrapper around the ical.js library executing 
-    JS-code via V8. The package enables users to parse iCalendar files. 
+    JS-code via V8. The package enables users to parse iCalendar files 
+    (.ics, .ifb, .iCal, .iFBf). 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

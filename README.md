@@ -9,7 +9,7 @@
 
 [![Project Status: Initial development is in progress, but there has not
 yet been a stable, usable release suitable for the
-public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+public.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 <a href="https://travis-ci.org/petermeissner/ical">
 <img src="https://api.travis-ci.org/petermeissner/ical.svg?branch=master">
 <a/> <a href="https://cran.r-project.org/package=ical">
@@ -26,7 +26,8 @@ public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus
 **Description**
 
 A simple wrapper around the ical.js library executing JS-code via V8.
-The package enables users to parse iCalendar files.
+The package enables users to parse iCalendar files (.ics, .ifb, .iCal,
+.iFBf).
 
 **License**
 
