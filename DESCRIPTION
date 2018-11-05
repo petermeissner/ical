@@ -19,7 +19,7 @@ Author: c(
       Source: https://github.com/mozilla-comm/ical.js"
     )
   )
-Maintainer: Peter Meissner <retp.meissner@gmail.com>
+Maintainer: Peter Meissner <retep.meissner@gmail.com>
 Description: A simple wrapper around the ical.js library executing 
     JS-code via V8. The package enables users to parse iCalendar files 
     (.ics, .ifb, .iCal, .iFBf). 

@@ -20,7 +20,7 @@ ical_parse_list(file = NULL, text = NULL)
 }
 \description{
 Parses iCalendar format from character vector or file and returns it
-as a list of colums.
+as a list of columns.
 
 Parses iCalendar format from character vector or file and returns it
 as data.frame.
