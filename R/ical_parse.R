@@ -1,7 +1,7 @@
 #' ical_parse
 #'
 #' Parses iCalendar format from character vector or file and returns it
-#' as a list of colums.
+#' as a list of columns.
 #'
 #' @param file path to file to be read in and parsed
 #' @param text text of ical file
