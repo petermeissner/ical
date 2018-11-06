@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-## iCalendar parsing
+## iCalendar Parsing
 
 **Status**
 
@@ -12,7 +12,9 @@ yet been a stable, usable release suitable for the
 public.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 <a href="https://travis-ci.org/petermeissner/ical">
 <img src="https://api.travis-ci.org/petermeissner/ical.svg?branch=master">
-<a/> <a href="https://cran.r-project.org/package=ical">
+<a/> [![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/petermeissner/ical?branch=master&svg=true)](https://ci.appveyor.com/project/petermeissner/ical)
+<a href="https://cran.r-project.org/package=ical">
 <img src="http://www.r-pkg.org/badges/version/ical"> </a>
 <a href="https://codecov.io/gh/petermeissner/ical">
 <img src="https://codecov.io/gh/petermeissner/ical/branch/master/graph/badge.svg" alt="Codecov" />
@@ -21,13 +23,14 @@ public.](http://www.repostatus.org/badges/latest/active.svg)](http://www.reposta
 
 **Development version**
 
-0.1.2 - 2018-11-05 / 10:59:57
+0.1.3 - 2018-11-05 / 12:41:40
 
 **Description**
 
-A simple wrapper around the ical.js library executing JS-code via V8.
-The package enables users to parse iCalendar files (.ics, .ifb, .iCal,
-.iFBf).
+A simple wrapper around the ‘ical.js’ library executing Javascript code
+via V8 (the Javascript engine driving the Chrome and ‘Node.js’ and
+accessible via the V8 R package). This package enables users to parse
+iCalendar files (.ics, .ifb, .iCal, .iFBf).
 
 **License**
 

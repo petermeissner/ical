@@ -49,6 +49,7 @@ length.cpp   <- length(grep("(^\\s*$)|(^\\s*#)|(^\\s*//)", lines.cpp,  value = T
 <a href="https://travis-ci.org/petermeissner/ical">
 <img src="https://api.travis-ci.org/petermeissner/ical.svg?branch=master">
 <a/>
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/petermeissner/ical?branch=master&svg=true)](https://ci.appveyor.com/project/petermeissner/ical)
 <a href="https://cran.r-project.org/package=ical">
 <img src="http://www.r-pkg.org/badges/version/ical">
 </a>
