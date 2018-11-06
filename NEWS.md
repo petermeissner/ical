@@ -1,3 +1,9 @@
+
+# ical 0.1.3 -- 2018-11-06
+
+* CRAN compliance
+
+
 # ical 0.1.2 -- 2018-11-05
 
 * Added a further tests
