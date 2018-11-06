@@ -1,7 +1,7 @@
 Package: ical
 Type: Package
-Title: iCalendar parsing
-Version: 0.1.2
+Title: iCalendar Parsing
+Version: 0.1.3
 Date: 2018-11-05
 Author: c(
     person(
@@ -20,9 +20,10 @@ Author: c(
     )
   )
 Maintainer: Peter Meissner <retep.meissner@gmail.com>
-Description: A simple wrapper around the ical.js library executing 
-    JS-code via V8. The package enables users to parse iCalendar files 
-    (.ics, .ifb, .iCal, .iFBf). 
+Description: A simple wrapper around the 'ical.js' library executing 
+    Javascript code via V8 (the Javascript engine driving the Chrome and 'Node.js'
+    and accessible via the V8 R package). This package enables users to parse 
+    iCalendar files (.ics, .ifb, .iCal, .iFBf). 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
