@@ -28,3 +28,13 @@ as data.frame.
 Parses iCalendar format from character vector or file and returns it
 as a list of entries.
 }
+\examples{
+
+# parse from character vector
+char_vec <- readLines(system.file("birthdays.ics", package = "ical"))
+ical_parse(text = char_vec)
+
+# parse from file
+ical_parse(file = system.file("birthdays.ics", package = "ical"))
+
+}

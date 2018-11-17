@@ -7,6 +7,14 @@
 #' @param text text of ical file
 #'
 #' @export
+#' @examples
+#'
+#' # parse from character vector
+#' char_vec <- readLines(system.file("birthdays.ics", package = "ical"))
+#' ical_parse(text = char_vec)
+#'
+#' # parse from file
+#' ical_parse(file = system.file("birthdays.ics", package = "ical"))
 #'
 ical_parse <- function(file = NULL, text = NULL){
 

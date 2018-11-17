@@ -1,7 +1,14 @@
 
+# ical 0.1.4 -- 2018-11-17
+
+* CRAN compliance: adding examples
+
+
+
 # ical 0.1.3 -- 2018-11-06
 
-* CRAN compliance
+* CRAN compliance: title case; quoting; improve package description
+
 
 
 # ical 0.1.2 -- 2018-11-05
