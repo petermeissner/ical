@@ -23,9 +23,9 @@ Maintainer: Peter Meissner <retep.meissner@gmail.com>
 Description: A simple wrapper around the 'ical.js' library executing 
     'Javascript' code via 'V8' (the 'Javascript' engine driving the 'Chrome' 
     browser and 'Node.js' and accessible via the 'V8' R package). 
-    This package enables users to parse iCalendar files ('.ics', '.ifb', 
-    '.iCal', '.iFBf') into lists and 'data.frames' to ultimatly do statistics
-    on events, meetings, schedules, brithdays, and the like.
+    This package enables users to parse 'iCalendar' files ('.ics', '.ifb', 
+    '.iCal', '.iFBf') into lists and 'data.frames' to ultimately do statistics
+    on events, meetings, schedules, birthdays, and the like.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
