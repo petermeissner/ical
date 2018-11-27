@@ -1,5 +1,5 @@
 
-# ical 0.1.4 -- 2018-11-27
+# ical 0.1.5 -- 2018-11-27
 
 * CRAN compliance: quoting all software words in description
 
