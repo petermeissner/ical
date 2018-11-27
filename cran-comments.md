@@ -17,12 +17,8 @@
 ## Your Comments
 
 
-> Thanks, we see:
-> 
-> 
-> * checking examples ... NONE
-> 
-> Why not ship a file with the package and read it in an examle ection?
+> Thanks, almost there: please really write all software names single 
+> qupotes in the Description field such as 'Javascript', 'V8'.
 
---> Thanks, indeed: done.
+--> Thanks, again: done.
 
