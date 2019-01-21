@@ -1,4 +1,10 @@
 
+# ical 0.1.6 -- 2019-01-21
+
+* CRAN compliance: fix issue in DESCRIPTION (Author field was using R code and therefore should have been Authors@R)
+
+
+
 # ical 0.1.5 -- 2018-11-27
 
 * CRAN compliance: quoting all software words in description
