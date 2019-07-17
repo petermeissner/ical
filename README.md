@@ -1,11 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-## iCalendar Parsing
+## ‘iCalendar’ Parsing
 
 **Status**
 
-*lines of R code:* 92, *lines of test code:* 62
+*lines of R code:* 96, *lines of test code:* 62
 
 [![Project Status: Initial development is in progress, but there has not
 yet been a stable, usable release suitable for the
@@ -23,21 +23,22 @@ status](https://ci.appveyor.com/api/projects/status/github/petermeissner/ical?br
 
 **Development version**
 
-0.1.3 - 2018-11-05 / 12:41:40
+0.1.7 - 2019-07-17 / 07:44:49
 
 **Description**
 
-A simple wrapper around the ‘ical.js’ library executing Javascript code
-via V8 (the Javascript engine driving the Chrome and ‘Node.js’ and
-accessible via the V8 R package). This package enables users to parse
-iCalendar files (.ics, .ifb, .iCal, .iFBf).
+A simple wrapper around the ‘ical.js’ library executing ‘Javascript’
+code via ‘V8’ (the ‘Javascript’ engine driving the ‘Chrome’ browser and
+‘Node.js’ and accessible via the ‘V8’ R package). This package enables
+users to parse ‘iCalendar’ files (‘.ics’, ‘.ifb’, ‘.iCal’, ‘.iFBf’) into
+lists and ‘data.frames’ to ultimately do statistics on events, meetings,
+schedules, birthdays, and the like.
 
 **License**
 
-MIT + file LICENSE <br>c( person( “Peter”, “Meissner”, role = c(“aut”,
-“cre”), email = “<retep.meissner@gmail.com>” ), person( “Philipp”,
-“Kewisch”, role = “cph”, comment = “Ical.js file is is licences under
-MPL. Source: <https://github.com/mozilla-comm/ical.js>” ) )
+MIT + file LICENSE <br>Peter Meissner \[aut, cre\], Philipp Kewisch
+\[cph\] (Ical.js file is is licences under MPL. Source:
+<https://github.com/mozilla-comm/ical.js>)
 
 **Contribution - AKA The-Think-Twice-Be-Nice-Rule**
 
@@ -46,6 +47,19 @@ Conduct. By participating in this project you agree to abide by its
 terms:
 
 <http://contributor-covenant.org/version/1/0/0/>
+
+## Other Packages
+
+There is one other package on CRAN that does calendar file parsing, too
+and which might be worth a look or two since is dedicated to cover a
+much broader range of use cases than ical - e.g. reading and writing
+ical files:
+
+  - Repo: <https://github.com/ATFutures/calendar>
+  - CRAN page:
+    <https://cran.r-project.org/web/packages/calendar/index.html>
+  - Vignette:
+    <https://cran.r-project.org/web/packages/calendar/vignettes/ical-creating-calendars.html>
 
 ## Installation
 
@@ -92,9 +106,9 @@ ical_parse_df(ical_file)
 ## 2      BIRTHDAY_79d389868f96182e@google.com PErson #2's birthday 2012-12-10 01:00:00 2012-12-11 01:00:00
 ## 3      BIRTHDAY_79d389868f96182e@google.com PErson #2's birthday 2013-12-10 01:00:00 2013-12-11 01:00:00
 ## 4      BIRTHDAY_79d389868f96182e@google.com PErson #2's birthday 2014-12-10 01:00:00 2014-12-11 01:00:00
-##                      description       last.modified    status
-## 1                           <NA> 2012-12-07 19:30:41 CONFIRMED
-## 2 Today is PErson #2's birthday! 2012-12-07 19:30:41 CONFIRMED
-## 3 Today is PErson #2's birthday! 2012-12-07 19:30:41 CONFIRMED
-## 4 Today is PErson #2's birthday! 2012-12-07 19:30:41 CONFIRMED
+##                      description    location       last.modified    status
+## 1                           <NA>       Paris 2012-12-07 19:30:41 CONFIRMED
+## 2 Today is PErson #2's birthday! Los Angeles 2012-12-07 19:30:41 CONFIRMED
+## 3 Today is PErson #2's birthday!             2012-12-07 19:30:41 CONFIRMED
+## 4 Today is PErson #2's birthday!        <NA> 2012-12-07 19:30:41 CONFIRMED
 ```

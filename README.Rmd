@@ -107,6 +107,20 @@ Please note that this project is released with a Contributor Code of Conduct. By
 http://contributor-covenant.org/version/1/0/0/
 
 
+## Other Packages 
+
+There is one other package on CRAN that does calendar file parsing, too and which might be worth a 
+look or two since is dedicated to cover a much broader range of use cases than ical - 
+e.g. reading and writing ical files: 
+
+- Repo: https://github.com/ATFutures/calendar 
+- CRAN page: https://cran.r-project.org/web/packages/calendar/index.html
+- Vignette: https://cran.r-project.org/web/packages/calendar/vignettes/ical-creating-calendars.html
+
+
+
+
+
 ## Installation
 
 **Installation and start - stable version**
