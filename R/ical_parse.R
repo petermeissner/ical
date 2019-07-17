@@ -73,6 +73,11 @@ ical_parse <- function(file = NULL, text = NULL){
         .getAllSubcomponents()
         .map(function (x) { return x.getFirstPropertyValue('description'); }),
 
+    location :
+      vcalendar
+        .getAllSubcomponents()
+        .map(function (x) { return x.getFirstPropertyValue('location'); }),
+
     'last-modified' :
       {
         timestamp:
