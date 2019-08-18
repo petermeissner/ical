@@ -9,7 +9,8 @@
 #'
 ical_parse_df <- function(file = NULL, text = NULL){
   as.data.frame(
-    ical_parse(file = file, text = text)
+    x                = ical_parse(file = file, text = text),
+    stringsAsFactors = FALSE
   )
 }
 
