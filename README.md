@@ -5,7 +5,7 @@
 
 **Status**
 
-*lines of R code:* 96, *lines of test code:* 62
+*lines of R code:* 160, *lines of test code:* 62
 
 [![Project Status: Initial development is in progress, but there has not
 yet been a stable, usable release suitable for the
@@ -23,7 +23,7 @@ status](https://ci.appveyor.com/api/projects/status/github/petermeissner/ical?br
 
 **Development version**
 
-0.1.7 - 2019-07-17 / 07:44:49
+0.1.8 - 2019-08-18 / 18:17:16
 
 **Description**
 
@@ -106,9 +106,14 @@ ical_parse_df(ical_file)
 ## 2      BIRTHDAY_79d389868f96182e@google.com PErson #2's birthday 2012-12-10 01:00:00 2012-12-11 01:00:00
 ## 3      BIRTHDAY_79d389868f96182e@google.com PErson #2's birthday 2013-12-10 01:00:00 2013-12-11 01:00:00
 ## 4      BIRTHDAY_79d389868f96182e@google.com PErson #2's birthday 2014-12-10 01:00:00 2014-12-11 01:00:00
-##                      description    location       last.modified    status
-## 1                           <NA>       Paris 2012-12-07 19:30:41 CONFIRMED
-## 2 Today is PErson #2's birthday! Los Angeles 2012-12-07 19:30:41 CONFIRMED
-## 3 Today is PErson #2's birthday!             2012-12-07 19:30:41 CONFIRMED
-## 4 Today is PErson #2's birthday!        <NA> 2012-12-07 19:30:41 CONFIRMED
+##                      description    location  class priority transp             dtstamp       last_modified
+## 1                           <NA>       Paris PUBLIC       NA OPAQUE 2012-12-07 19:30:41 2012-12-07 19:30:41
+## 2 Today is PErson #2's birthday! Los Angeles PUBLIC       NA OPAQUE 2012-12-07 19:30:41 2012-12-07 19:30:41
+## 3 Today is PErson #2's birthday!             PUBLIC       NA OPAQUE 2012-12-07 19:30:41 2012-12-07 19:30:41
+## 4 Today is PErson #2's birthday!        <NA> PUBLIC       NA OPAQUE 2012-12-07 19:30:41 2012-12-07 19:30:41
+##      status
+## 1 CONFIRMED
+## 2 CONFIRMED
+## 3 CONFIRMED
+## 4 CONFIRMED
 ```
