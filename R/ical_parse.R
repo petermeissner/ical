@@ -56,7 +56,13 @@ ical_parse <- function(file = NULL, text = NULL){
           vcalendar
             .getAllSubcomponents()
             .map(function (x) { return x.getFirstPropertyValue('dtstart'); })
-            .map(function (x) { return new Date(x).getTime()/1000; })
+            .map(function (x) {
+              if ( x === null ) {
+                return null;
+              } else {
+                return new Date(x).getTime()/1000;
+              }
+            })
       },
 
     end:
@@ -65,7 +71,13 @@ ical_parse <- function(file = NULL, text = NULL){
           vcalendar
             .getAllSubcomponents()
             .map(function (x) { return x.getFirstPropertyValue('dtend'); })
-            .map(function (x) { return new Date(x).getTime()/1000; })
+            .map(function (x) {
+              if ( x === null ) {
+                return null;
+              } else {
+                return new Date(x).getTime()/1000;
+              }
+            })
       },
 
     description :
@@ -78,13 +90,50 @@ ical_parse <- function(file = NULL, text = NULL){
         .getAllSubcomponents()
         .map(function (x) { return x.getFirstPropertyValue('location'); }),
 
-    'last-modified' :
+    class :
+      vcalendar
+        .getAllSubcomponents()
+        .map(function (x) { return x.getFirstPropertyValue('class'); }),
+
+    priority :
+      vcalendar
+        .getAllSubcomponents()
+        .map(function (x) { return x.getFirstPropertyValue('priority'); }),
+
+    transp :
+      vcalendar
+        .getAllSubcomponents()
+        .map(function (x) { return x.getFirstPropertyValue('transp'); }),
+
+    dtstamp :
+      {
+        timestamp:
+          vcalendar
+            .getAllSubcomponents()
+            .map(function (x) { return x.getFirstPropertyValue('dtstamp'); })
+            .map(function (x) {
+              if ( x === null ) {
+                return null;
+              } else {
+                return new Date(x).getTime()/1000;
+              }
+            })
+      },
+
+
+    'last_modified' :
       {
         timestamp:
           vcalendar
             .getAllSubcomponents()
             .map(function (x) { return x.getFirstPropertyValue('last-modified'); })
-            .map(function (x) { return new Date(x).getTime()/1000; })
+            .map(function (x) {
+              if ( x === null ) {
+                return null;
+              } else {
+                return new Date(x).getTime()/1000;
+              }
+            })
       },
 
     'status' :

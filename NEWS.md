@@ -1,7 +1,23 @@
 
+# ical 0.1.8 -- 2019-08-18
+
+* fix: ical_parse would return valid timestamps when encountering missing 
+  timestamps in data - now it returns NA, as should be expected
+* minor: ical_parse_df() now returns character vectors instead of factors
+* `ical_parse()` now returns many more fields: priority, class, transp, dtstamp
+
+
+# ical 0.1.7 -- 2019-07-17
+
+* Stéphane Trainel <stephane.trainel@gmail.com> made `ical_parse()` return 
+  location field as well
+
+
+
 # ical 0.1.6 -- 2019-01-21
 
-* CRAN compliance: fix issue in DESCRIPTION (Author field was using R code and therefore should have been Authors@R)
+* CRAN compliance: fix issue in DESCRIPTION (Author field was using R code and 
+  therefore should have been Authors@R)
 
 
 
