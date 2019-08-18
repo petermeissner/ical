@@ -5,6 +5,8 @@
 #'
 #' @param file path to file to be read in and parsed
 #' @param text text of ical file
+#' @param return_empty_rows whether or not to filter out calendar items for
+#'   which all fields are empty (NA)
 #'
 #' @export
 #' @examples
@@ -16,7 +18,7 @@
 #' # parse from file
 #' ical_parse(file = system.file("birthdays.ics", package = "ical"))
 #'
-ical_parse <- function(file = NULL, text = NULL){
+ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
 
   # use ical text from character vector or from file
   if ( is.null(text) | is.function(text) ){
@@ -143,7 +145,30 @@ ical_parse <- function(file = NULL, text = NULL){
   }
   ")
 
-  # retrieve, cleanup and return
-  ical_clean_ical_parsed(v8_env$v8$get("res"))
+  # retrieve and cleanup
+  tmp <- ical_clean_ical_parsed(v8_env$v8$get("res"))
+
+  # filter out missing only rows
+  if ( return_empty_rows == FALSE ) {
+    iffer <-
+      apply(
+        X =
+          vapply(
+            X         = tmp,
+            FUN       = is.na,
+            FUN.VALUE = logical(length(tmp[[1]]))
+          ),
+        MARGIN = 1,
+        FUN    = all
+      )
+    tmp <-
+      lapply(
+        X = tmp,
+        FUN = function(x){ x[ !iffer ] }
+      )
+  }
+
+  # return
+  tmp
 }
 

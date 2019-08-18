@@ -7,7 +7,7 @@
 \alias{ical_parse_list}
 \title{ical_parse}
 \usage{
-ical_parse(file = NULL, text = NULL)
+ical_parse(file = NULL, text = NULL, return_empty_rows = FALSE)
 
 ical_parse_df(file = NULL, text = NULL)
 
@@ -17,6 +17,9 @@ ical_parse_list(file = NULL, text = NULL)
 \item{file}{path to file to be read in and parsed}
 
 \item{text}{text of ical file}
+
+\item{return_empty_rows}{whether or not to filter out calendar items for
+which all fields are empty (NA)}
 }
 \description{
 Parses iCalendar format from character vector or file and returns it

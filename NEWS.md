@@ -5,6 +5,8 @@
   timestamps in data - now it returns NA, as should be expected
 * minor: ical_parse_df() now returns character vectors instead of factors
 * `ical_parse()` now returns many more fields: priority, class, transp, dtstamp
+* by default calendar items containing only empty rows are filtered out within 
+  normal parsing function
 
 
 # ical 0.1.7 -- 2019-07-17
