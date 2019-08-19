@@ -22,7 +22,7 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
 
   # use ical text from character vector or from file
   if ( is.null(text) | is.function(text) ){
-    text <- readLines(file)
+    text <- readLines(file, encoding = "UTF-8")
   }
 
   # ensure character vector only has one element

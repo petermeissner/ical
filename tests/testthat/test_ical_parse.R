@@ -78,3 +78,41 @@ test_that(
     })
 )
 
+test_that(
+  desc = "ical_parse() produces UTF-8 character encoding",
+  code =
+    expect_true({
+      Encoding(
+        ical_parse_df(
+          system.file("d-mini.ics", package = "ical")
+        )$description[21]
+      ) == "UTF-8"
+    })
+)
+
+test_that(
+  desc = "ical_parse() filteres out missing only calendar items (e.g. non VEVENT)",
+  code =
+    expect_true({
+      nrow(
+        ical_parse_df(
+          system.file("d-mini.ics", package = "ical")
+        )
+      ) == 21
+    })
+)
+
+
+test_that(
+  desc = "ical_parse() missing dates are parsed as NA",
+  code =
+    expect_true({
+      all(
+        is.na(
+          ical_parse_df(
+            system.file("d-mini.ics", package = "ical")
+          )$last_modified
+        )
+      )
+    })
+)
