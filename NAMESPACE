@@ -2,5 +2,6 @@
 
 export(ical_clean_ical_parsed)
 export(ical_parse)
+export(ical_parse_all)
 export(ical_parse_df)
 export(ical_parse_list)
