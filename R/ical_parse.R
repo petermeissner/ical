@@ -20,18 +20,10 @@
 #'
 ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
 
-  # use ical text from character vector or from file
-  if ( is.null(text) | is.function(text) ){
-    text <- readLines(file, encoding = "UTF-8")
-  }
-
-  # ensure character vector only has one element
-  text <- paste0(text, collapse = "\n")
-
   # put ical text into  V8
   v8_env$v8$assign(
     "cal_data",
-    text
+    ical_read_text(file = file, text = text)
   )
 
   # parse ical text
