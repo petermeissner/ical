@@ -5,7 +5,7 @@
 
 **Status**
 
-*lines of R code:* 160, *lines of test code:* 62
+*lines of R code:* 178, *lines of test code:* 97
 
 [![Project Status: Initial development is in progress, but there has not
 yet been a stable, usable release suitable for the
@@ -23,7 +23,7 @@ status](https://ci.appveyor.com/api/projects/status/github/petermeissner/ical?br
 
 **Development version**
 
-0.1.8 - 2019-08-18 / 18:17:16
+0.2.0 - 2019-08-22 / 15:24:42
 
 **Description**
 
