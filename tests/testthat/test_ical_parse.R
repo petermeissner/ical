@@ -82,13 +82,17 @@ test_that(
   desc = "ical_parse() produces UTF-8 character encoding",
   code =
     expect_true({
-      Encoding(
-        ical_parse_df(
-          system.file("d-mini.ics", package = "ical")
-        )$description[21]
-      ) == "UTF-8"
+      any(
+        Encoding(
+          ical_parse_df(
+            system.file("d-mini.ics", package = "ical")
+          )$description
+        ) == "UTF-8"
+      )
     })
 )
+
+
 
 test_that(
   desc = "ical_parse() filteres out missing only calendar items (e.g. non VEVENT)",
@@ -116,3 +120,4 @@ test_that(
       )
     })
 )
+

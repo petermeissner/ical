@@ -8,6 +8,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .V8history
-js_dev/
+js_dev
 .vscode
-d-mini.ics

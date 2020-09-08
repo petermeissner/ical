@@ -5,11 +5,11 @@
 #' @param url url to caldav endpoint, e.g.: "https://nextcloud03.webo.cloud/remote.php/dav/calendars/me@myweb.de/personal/"
 #' @param user user name
 #' @param password user password
+#' @param ret character vector naming list items to return
 #'
 #' @import curl
 #' @import xml2
 #'
-#' @export
 #'
 caldav_get_all_simple_auth <-
   function(url, user = "", password = "", ret = c("calendar", "response", "df")){

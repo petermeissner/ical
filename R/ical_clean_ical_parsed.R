@@ -26,11 +26,13 @@ ical_clean_ical_parsed <- function(ical_parsed) {
     x_name <- names(ical_parsed)[i]
 
     if (is.list(x) && length(names(x)) == 1 && "timestamp" == names(x)) {
+      # clean up for timestamps: transform to POSIXct
 
       ical_parsed_clean[[ names(ical_parsed)[i] ]] <-
         as.POSIXct(x$timestamp, origin = "1970-01-01")
 
     } else if ( is.list(x) && length(names(x)) > 1 ){
+      # clean up for multi field entries
 
       for ( k in seq_along(x) ){
         ical_parsed_clean[[ paste0(x_name, "_", names(x)[k]) ]] <-
@@ -41,6 +43,8 @@ ical_clean_ical_parsed <- function(ical_parsed) {
       ical_parsed_clean[[ names(ical_parsed)[i] ]] <- x
     }
   }
+
+  ical_parsed_clean$rrule <- NULL
 
   # return
   ical_parsed_clean

@@ -142,8 +142,10 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
   }
   ")
 
+
   # retrieve and cleanup
-  tmp <- ical_clean_ical_parsed(v8_env$v8$get("res"))
+  res <- v8_env$v8$get("res")
+  tmp <- ical_clean_ical_parsed(res)
 
   # filter out missing only rows
   if ( return_empty_rows == FALSE ) {

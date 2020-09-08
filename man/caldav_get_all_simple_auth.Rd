@@ -17,6 +17,8 @@ caldav_get_all_simple_auth(
 \item{user}{user name}
 
 \item{password}{user password}
+
+\item{ret}{character vector naming list items to return}
 }
 \description{
 Function to build and execute web request against CalDav server.
