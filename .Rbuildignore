@@ -9,3 +9,5 @@
 ^\.Rproj\.user$
 .V8history
 js_dev/
+.vscode
+d-mini.ics

@@ -168,3 +168,8 @@ ical_parse_df(ical_file)
 
 
 
+## Sources
+
+- https://en.wikipedia.org/wiki/ICalendar
+- https://www.kanzaki.com/docs/ical/
+

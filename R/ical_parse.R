@@ -99,6 +99,11 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
         .getAllSubcomponents()
         .map(function (x) { return x.getFirstPropertyValue('transp'); }),
 
+    rrule :
+        vcalendar
+        .getAllSubcomponents()
+        .map(function (x) { return x.getFirstPropertyValue('rrule'); }),
+
     dtstamp :
       {
         timestamp:
