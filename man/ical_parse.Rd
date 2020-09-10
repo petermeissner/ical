@@ -9,7 +9,7 @@
 \alias{ical_parse_list}
 \title{ical_parse}
 \usage{
-ical_parse(file = NULL, text = NULL, return_empty_rows = FALSE)
+ical_parse(file = NULL, text = NULL, simplify = TRUE)
 
 ical_parse_df(file = NULL, text = NULL)
 

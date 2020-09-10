@@ -18,17 +18,21 @@
 #' # parse from file
 #' ical_parse(file = system.file("birthdays.ics", package = "ical"))
 #'
-ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
+ical_parse <- function(file = NULL, text = NULL, simplify = TRUE){
 
-  # put ical text into  V8
-  v8_env$v8$assign(
-    "cal_data",
-    ical_read_text(file = file, text = text)
-  )
+  text <- ical_read_text(file = file, text = text)
+  tmp  <- list()
 
-  # parse ical text
-  v8_env$v8$eval(
-    "
+  for ( i in seq_along(text)){
+    # put ical text into  V8
+    v8_env$v8$assign(
+      "cal_data",
+      text[i]
+    )
+
+    # parse ical text
+    v8_env$v8$eval(
+      "
   // prepare data
   vcalendar = new ICAL.Component(ICAL.parse(cal_data));
 
@@ -44,7 +48,7 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
         .getAllSubcomponents()
         .map(function (x) { return x.getFirstPropertyValue('summary'); }),
 
-    start :
+    dtstart :
       {
         timestamp:
           vcalendar
@@ -59,7 +63,7 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
             })
       },
 
-    end:
+    dtend:
       {
         timestamp:
           vcalendar
@@ -120,7 +124,7 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
       },
 
 
-    'last_modified' :
+    'last-modified' :
       {
         timestamp:
           vcalendar
@@ -143,31 +147,17 @@ ical_parse <- function(file = NULL, text = NULL, return_empty_rows = FALSE){
   ")
 
 
-  # retrieve and cleanup
-  res <- v8_env$v8$get("res")
-  tmp <- ical_clean_ical_parsed(res)
+    # retrieve and cleanup
+    res <- v8_env$v8$get("res")
+    tmp[[length(tmp) + 1]] <- ical_clean_ical_parsed(res)
 
-  # filter out missing only rows
-  if ( return_empty_rows == FALSE ) {
-    iffer <-
-      apply(
-        X =
-          vapply(
-            X         = tmp,
-            FUN       = is.na,
-            FUN.VALUE = logical(length(tmp[[1]]))
-          ),
-        MARGIN = 1,
-        FUN    = all
-      )
-    tmp <-
-      lapply(
-        X = tmp,
-        FUN = function(x){ x[ !iffer ] }
-      )
   }
 
   # return
-  tmp
+  if ( length(tmp) == 1 & simplify == TRUE ){
+    return(tmp[[1]])
+  } else {
+    return(tmp)
+  }
 }
 

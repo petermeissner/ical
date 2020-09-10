@@ -15,13 +15,14 @@ ical_read_text <-
 
     # use ical text from character vector or from file
     if ( is.null(text) | is.function(text) ){
-      text <- readLines(file, encoding = enc)
+      text <-
+        paste0(
+          readLines(file, encoding = enc),
+          sep = "\n"
+        )
     }
 
     # ensure character vector
-    #   - only has one element and
     #   - is UTF-8 encoded
-    enc2utf8(
-      paste0(text, collapse = "\n")
-    )
+    enc2utf8(text)
   }
