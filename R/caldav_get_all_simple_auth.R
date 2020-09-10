@@ -5,14 +5,13 @@
 #' @param url url to caldav endpoint, e.g.: "https://nextcloud03.webo.cloud/remote.php/dav/calendars/me@myweb.de/personal/"
 #' @param user user name
 #' @param password user password
-#' @param ret character vector naming list items to return
 #'
 #' @import curl
 #' @import xml2
 #'
 #'
 caldav_get_all_simple_auth <-
-  function(url, user = "", password = "", ret = c("calendar", "response", "df")){
+  function(url, user = "", password = ""){
     # new handle
     h <- curl::new_handle()
 
@@ -67,11 +66,12 @@ caldav_get_all_simple_auth <-
     calendar_node <- xml2::xml_find_all(x = xml_parsed, xpath = "//cal:calendar-data")
     calendar_text <- xml2::xml_text(calendar_node)
 
-    # return
-    list(
+    # collect
+    res <- list(
       response = res,
-      calendar = calendar_text,
-      df       = ical_parse_df(text = calendar_text)
-    )[ret]
+      calendar = calendar_text
+    )
 
+    # return
+    res
   }

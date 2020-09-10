@@ -4,12 +4,7 @@
 \alias{caldav_get_all_simple_auth}
 \title{Request data from CalDav Server}
 \usage{
-caldav_get_all_simple_auth(
-  url,
-  user = "",
-  password = "",
-  ret = c("calendar", "response", "df")
-)
+caldav_get_all_simple_auth(url, user = "", password = "")
 }
 \arguments{
 \item{url}{url to caldav endpoint, e.g.: "https://nextcloud03.webo.cloud/remote.php/dav/calendars/me@myweb.de/personal/"}
@@ -17,8 +12,6 @@ caldav_get_all_simple_auth(
 \item{user}{user name}
 
 \item{password}{user password}
-
-\item{ret}{character vector naming list items to return}
 }
 \description{
 Function to build and execute web request against CalDav server.
