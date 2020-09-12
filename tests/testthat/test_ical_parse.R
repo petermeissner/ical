@@ -95,7 +95,7 @@ test_that(
 
 
 test_that(
-  desc = "ical_parse() filteres out missing only calendar items (e.g. non VEVENT)",
+  desc = "ical_parse_df() filteres out missing only calendar items (e.g. non VEVENT)",
   code =
     expect_true({
       nrow(

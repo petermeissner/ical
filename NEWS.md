@@ -2,8 +2,6 @@
 # ical 0.3.0 -- 2019-09-08
 
 - adding RRULE fields 
-- adding not officially supported and experimental `caldav_get_all_simple_auth()` function
-  to retrieve ICAL-data from CalDav servers via simple authentification
 
 
 # ical 0.1.8 -- 2019-08-18

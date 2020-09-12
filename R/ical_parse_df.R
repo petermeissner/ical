@@ -8,10 +8,15 @@
 #' @export
 #'
 ical_parse_df <- function(file = NULL, text = NULL){
-  as.data.frame(
-    x                = ical_parse(file = file, text = text),
-    stringsAsFactors = FALSE
-  )
+  df <-
+    as.data.frame(
+      x                = ical_parse(file = file, text = text),
+      stringsAsFactors = FALSE
+    )
+
+  # filter out only NA rows and return
+  ncol_df <- ncol(df)
+  df[ apply(df, 1, function(x){ !(sum(is.na(x)) == ncol_df) }), ]
 }
 
 

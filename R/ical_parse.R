@@ -21,18 +21,16 @@
 ical_parse <- function(file = NULL, text = NULL, simplify = TRUE){
 
   text <- ical_read_text(file = file, text = text)
-  tmp  <- list()
 
-  for ( i in seq_along(text)){
-    # put ical text into  V8
-    v8_env$v8$assign(
-      "cal_data",
-      text[i]
-    )
+  # put ical text into  V8
+  v8_env$v8$assign(
+    "cal_data",
+    text
+  )
 
-    # parse ical text
-    v8_env$v8$eval(
-      "
+  # parse ical text
+  v8_env$v8$eval(
+    "
   // prepare data
   vcalendar = new ICAL.Component(ICAL.parse(cal_data));
 
@@ -147,17 +145,11 @@ ical_parse <- function(file = NULL, text = NULL, simplify = TRUE){
   ")
 
 
-    # retrieve and cleanup
-    res <- v8_env$v8$get("res")
-    tmp[[length(tmp) + 1]] <- ical_clean_ical_parsed(res)
-
-  }
+  # retrieve and cleanup
+  res <- v8_env$v8$get("res")
+  res <- ical_clean_ical_parsed(res)
 
   # return
-  if ( length(tmp) == 1 & simplify == TRUE ){
-    return(tmp[[1]])
-  } else {
-    return(tmp)
-  }
+  res
 }
 
